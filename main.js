@@ -51,15 +51,18 @@ setTimeout(() => {
 // TODO: Replace the "Child Node" with a new <p> element that reads "New Child Node"
 
 let parent3 = document.getElementById("exercise-container3");
-
 let N1 = document.getElementById("N1");
-N1.textContent = "New Child Node";
 
+let input = document.createElement("input");
+input.value = "Replaced N1";
+
+parent3.replaceChild(input, N1);
+
+input.focus();
 // TODO: Remove the "New Child Node"
-
-setTimeout(()=> {
-    parent3.removeChild(N1);
-}), 5000;
+setTimeout(() => {
+    parent3.removeChild(input);
+},5000);
 
 /*----------- Exercise #4: ANIMATIONS ----------- */
 // TODO: Write your JavaScript here to make the red box go from left to right
