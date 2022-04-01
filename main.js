@@ -3,9 +3,20 @@ console.log("Script attached");
 
 // Select Node #1 and change the text to: "I used the getElementById("node1") method to access this"
 
+let node1 = document.getElementById("node1");
+node1.textContent = "I used the getElementById('node1') method to access this";
+
 // Select Node #2 and change the text to: "I used the getElementByClassName("node2") method to access this" */
 
+let node2s = document.getElementsByClassName("node2");//returns HTMLCollection
+node2s[0].textContent = "I used the getElementsByClassName('node2') method to access this";
+
 // Select ALL the h3 tags and change the text to: "I used the getElementByTagName("h3") method to access all of these" */
+
+let h3s = document.getElementsByTagName("h3");//returns HTMLCollection
+for (let ele of h3s){
+    ele.innerHTML ="I used the getElementByTagName('h3') method to access all of these"
+}
 
 /*----------- Exercise #2: CREATING/APPENDING/INSERTING ELEMENTS/OBJECTS -----------*/
 
