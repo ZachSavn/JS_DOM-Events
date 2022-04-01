@@ -22,6 +22,24 @@ for (let ele of h3s){
 
 // TODO: Create a paragraph element using this document.createElement() and put this text inside "This node was created using the createElement() method"
 
+let parent = document.getElementById("parent")
+
+let p = document.createElement("p")//creates p element
+let a = document.createElement("a")//creates a element
+
+p.textContent = "I am a <p> tag";
+
+a.textContent = "Visit Us";
+a.href = "https://truecoders.io/";
+
+parent.appendChild(p);//puts created p to DOM doc
+
+setTimeout(() => {
+    parent.insertBefore(a , p);
+},4000);//sets 4 seconds
+
+
+
 // TODO: Append the created node to the parent node using the element.appendChild() method
 
 // TODO: Create a <a> element using this document.createElement() and put this text inside "I am a <a> tag"
