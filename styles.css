@@ -13,31 +13,12 @@ body {
   margin: 0;
 }
 
-#modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-card {
-  padding: 3rem;
-  background-color: white;
-  border-radius: 10px;
-  color: #000014;
-}
-
 .root {
   text-align: center;
   min-height: 100vh;
   background-color: #222;
   padding: 1rem;
+  position: relative;
 }
 
 /*--------------- EXERCISE ---------------- */
@@ -93,13 +74,34 @@ body {
     top: 0px;
   }
 }
-  
-}
-#btn {
+
+.button {
   padding: 0.5rem 0.75rem;
   border: none;
   border-radius: 0.5rem;
   color: inherit;
   background-color: darkcyan;
   cursor: pointer;
+}
+
+.modal-container{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal{
+  background-color: #eee;
+  color: #222;
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
 }

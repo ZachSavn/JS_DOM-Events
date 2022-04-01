@@ -78,3 +78,31 @@ setTimeout(() => {
 // -> "Clicking the button triggers the onclick event, which calls the JS function show()... which alerts the user"
 // This div should be a 'modal' that covers the main content on the screen
 // BONUS: The modal popup should be able to be closed. Refactor for this functionality
+
+let btn = document.querySelector("#btn");
+
+btn.addEventListener("click", () =>{
+    let main = document.querySelector(".root");
+
+    let container = document.createElement("div");
+    container.classList.add("modal-container");
+
+    let modal = document.createElement("div");
+    modal.classList.add("modal");
+
+    let modalTitle = document.createElement("h2");
+    modalTitle.textContent = "Modal Title";
+    let modalText = document.createElement("p");
+    modalText.textContent = "Text resides here";
+    let modalBtn = document.createElement("button");
+    modalBtn.classList.add("button");
+    modalBtn.textContent = "Close";
+    modalBtn.addEventListener("click", () =>{
+        main.removeChild(container);
+        btn.disabled = false;
+    });
+   modal.append(modalTitle, modalText, modalBtn);
+   container.appendChild(modal);
+
+   main.appendChild(container);
+});
